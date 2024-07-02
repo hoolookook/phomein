@@ -1,0 +1,95 @@
+@import "./keyframes.scss";
+
+// @mixin WH($width, $height) {
+//   width: $width;
+//   height: $height;
+// }
+@mixin abPos($top, $left, $btmRight: false, $transform: false) {
+  position: absolute;
+
+  @if $transform {
+    transform: translate(-50%, -50%);
+  }
+  @if $btmRight {
+    bottom: $top;
+    right: $left;
+  } @else {
+    top: $top;
+    left: $left;
+  }
+}
+@mixin animControl($animName, $sec, $fillName) {
+  //   animation: $animName $sec $fillName;
+  animation-name: $animName;
+  animation-duration: $sec;
+  animation-fill-mode: $fillName;
+}
+
+@mixin tranYCtrl($opacity) {
+  transform: translate(-50%, var(--toY));
+  opacity: $opacity;
+  transition-delay: 0.2s;
+  transition: all 1.2s ease-in-out;
+}
+@mixin tranXCtrl($opacity, $transY) {
+  transform: translate(var(--toX), $transY);
+  opacity: $opacity;
+  transition-delay: 0.2s;
+  transition: all 1.2s ease-in-out;
+}
+// 애니메이션 조작  정방향과 역방향,애니메이션 이름, 재생 후 상태, 투명도
+
+@mixin transYCtrl($down: false, $sec, $fillName, $oppacity) {
+  animation-duration: $sec;
+  animation-fill-mode: $fillName;
+  opacity: $oppacity;
+
+  @if $down {
+    @keyframes yDown {
+      from {
+        transform: translate(-50%, var(--transY));
+      }
+      to {
+        transform: translate(-50%, var(--oppoY));
+      }
+    }
+    animation-name: yDown;
+  } @else {
+    @keyframes yUp {
+      from {
+        transform: translate(-50%, var(--oppoY));
+      }
+      to {
+        transform: translate(-50%, var(--transY));
+      }
+    }
+    animation-name: yUp;
+  }
+}
+
+@mixin transXCtrl($right: false, $sec, $fillName, $oppacity) {
+  animation-duration: $sec;
+  animation-fill-mode: $fillName;
+  opacity: $oppacity;
+  @if $right {
+    @keyframes yRight {
+      from {
+        transform: translate(var(--transX), var(--fromY));
+      }
+      to {
+        transform: translate(var(--oppoX), var(--toY));
+      }
+    }
+    animation-name: yRight;
+  } @else {
+    @keyframes yLeft {
+      from {
+        transform: translate(var(--oppoX), var(--toY));
+      }
+      to {
+        transform: translate(var(--transX), var(--fromY));
+      }
+    }
+    animation-name: yLeft;
+  }
+}

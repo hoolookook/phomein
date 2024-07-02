@@ -1,0 +1,47 @@
+@font-face {
+    font-family: MalgunGothic;
+    src: url(../../css/fonts/MalgunGothic.eot);
+}
+
+body {
+    font-family: "Noto Sans", "Malgun Gothic", dotum, gulim, verdana, sans-serif;
+    letter-spacing: -0.05em;
+    word-break: break-all;
+    font-weight: 400;
+    line-height: 1;
+}
+
+@font-face {
+    font-family: "Noto Sans";
+    font-style: normal;
+    font-weight: 300;
+    src: url("../../css/fonts/NotoSansKR-Light.woff2") format("woff2"), url("../../css/fonts/NotoSansKR-Light.woff") format("woff"), url("../../css/fonts/NotoSansKR-Light.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "Noto Sans";
+    font-style: normal;
+    font-weight: 400;
+    src: url("../../css/fonts/NotoSansKR-Regular.woff2") format("woff2"), url("../../css/fonts/NotoSansKR-Regular.woff") format("woff"), url("../font/NotoSansKR-Regular.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "Noto Sans";
+    font-style: normal;
+    font-weight: 500;
+    src: url("../../css/fonts/NotoSansKR-Medium.woff2") format("woff2"), url("../../css/fonts/NotoSansKR-Medium.woff") format("woff"), url("../../css/fonts/NotoSansKR-Medium.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "roboto";
+    src: url("../../css/fonts/Roboto-Light.woff2") format("woff2"), url("../../css/fonts/Roboto-Light.woff") format("woff"), url("../../css/fonts/Roboto-Light.otf") format("opentype");
+    font-style: normal;
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: "roboto";
+    src: url("../../css/fonts/Roboto-Regular.woff2") format("woff2"), url("../../css/fonts/Roboto-Regular.woff") format("woff"), url("../../css/fonts/Roboto-Regular.otf") format("opentype");
+    font-style: normal;
+    font-weight: 400;
+}

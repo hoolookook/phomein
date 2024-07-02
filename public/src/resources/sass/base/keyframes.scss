@@ -1,0 +1,90 @@
+@keyframes topSlide {
+  from {
+    transform: translate(0, 30px);
+    padding-bottom: 0px;
+    opacity: 0;
+  }
+  to {
+    transform: translate(0, 0);
+    padding-bottom: 30px;
+    opacity: 1;
+  }
+}
+@keyframes bottomSlide {
+  from {
+    transform: translate(0, 0);
+    padding-bottom: 30px;
+
+    opacity: 1;
+  }
+  to {
+    transform: translate(0, 30px);
+    padding-bottom: 0px;
+
+    opacity: 0;
+  }
+}
+
+@keyframes leftSTransform {
+  from {
+    transform: translate(30px, 0);
+
+    opacity: 0;
+  }
+  to {
+    transform: translate(0, 0);
+
+    opacity: 1;
+  }
+}
+@keyframes processBar {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+@keyframes rightSlide {
+  from {
+    padding-right: 100px;
+    opacity: 0;
+  }
+  to {
+    padding-right: 70px;
+    opacity: 1;
+  }
+}
+@keyframes leftSlide {
+  from {
+    padding-right: 70px;
+    // opacity: 1;
+  }
+  to {
+    padding-right: 100px;
+    // opacity: 1;
+    color: transparent;
+  }
+}
+@keyframes leftSlideOpOne {
+  from {
+    transform: translate(60px, 0px);
+    opacity: 0;
+  }
+  to {
+    transform: translate(0px, 0px);
+    opacity: 1;
+  }
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.3;
+  }
+}
